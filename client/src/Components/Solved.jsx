@@ -9,8 +9,7 @@ class Solved extends Component {
         }
     }
     componentDidMount() {
-        axios.post('/data/solved').then((res) => {
-          console.log("FRONT END POSTTT:  ")
+        axios.get('/data').then((res) => {
           console.log(res)
           this.setState({
             data: res.data.data

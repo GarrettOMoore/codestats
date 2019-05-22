@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-import axios from 'axios'
 import Solved from './Components/Solved'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 

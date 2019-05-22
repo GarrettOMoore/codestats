@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-router.post('/data', (res) => {
+router.post('/', (res) => {
 	axios.get('https://www.codewars.com/api/v1/users/GarrettOMoore/code-challenges/completed?page=0', {
     headers: {
       Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
