@@ -2,7 +2,7 @@
   "name": "codewars-fun",
   "version": "1.0.0",
   "description": "",
-  "main": "data.js",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^8.0.0",
