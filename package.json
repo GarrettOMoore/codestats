@@ -1,0 +1,25 @@
+{
+  "name": "codewars-fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GarrettOMoore/codestats.git"
+  },
+  "author": "Garrett Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GarrettOMoore/codestats/issues"
+  },
+  "homepage": "https://github.com/GarrettOMoore/codestats#readme"
+}
