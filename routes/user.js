@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-router.post('/', (res) => {
-	axios.get('https://www.codewars.com/api/v1/users/GarrettOMoore/code-challenges/completed?page=0', {
+router.get('/', (req,res) => {
+	axios.get('https://www.codewars.com/api/v1/users/GarrettOMoore', {
     headers: {
       Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
     }}).then((result)=> {
-			console.log("RESULT :  ", result.data.data)
-   res.json(result.data.data)
+			console.log("USER :  ", result.data)
+      res.json({user: result.data})
 }).catch((err)=> {
-	console.log("IN CATCH")
+	console.log("IN CATCH...")
   res.json({err})
  })
 })

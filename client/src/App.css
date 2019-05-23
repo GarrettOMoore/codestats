@@ -35,3 +35,15 @@
 h1 {
   text-align: center;
 }
+
+.solved-results {
+  text-align: center;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.search-box {
+  margin-top: 2em;
+}
