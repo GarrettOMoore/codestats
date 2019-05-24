@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Solved from './Components/Solved'
-// import axios from 'axios';
+import axios from 'axios';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       name: '',
       user: {},
+      showData: false
     }
     // this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -21,17 +22,22 @@ class App extends Component {
     })
   }
 
-  // handleClick = (e) => {
-  //   e.persist()
-  //   e.preventDefault()
-  //   console.log("IN CLICK FUNC")
-  //   console.log(e.target.value)
-  //   let userName = e.target.value
-  //   this.setState({
-  //     name: e.target.name.value
-  //   })
-  //   // let userName = e.target.name.value
-  // }
+  handleClick = (e) => {
+
+    console.log("NAME: ", this.state.name)
+    axios.post('/user', {
+      name: this.state.name
+    }).then((res)=>{
+      console.log(res.data.user)
+      this.setState({
+        user: res.data.user,
+        data: res.data.data,
+        showData: true
+      })
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
   
   render() {
   return (
@@ -44,10 +50,9 @@ class App extends Component {
         <h3>Enter your Codewars username: </h3>
         <input onChange={this.handleChange}name='name' type='text'/>
         <Link className='nav-text'to='/solved'><button onClick={this.handleClick}>Submit!</button></Link>
-        
       </section>
     </div>
-    <Route exact path='/solved' render={()=><Solved/>} userName={this.state.name} />
+    <Route exact path='/solved' render={()=><Solved userData={this.state.user} katas={this.state.data}/>} />
     </Router>
   )
  }
