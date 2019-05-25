@@ -1,7 +1,32 @@
+/* Color Theme Swatches in Hex */
+.Café-Cultura-1-hex { color: #F2F0E7; }
+.Café-Cultura-2-hex { color: #D1C8BB; }
+.Café-Cultura-3-hex { color: #BAAD99; }
+.Café-Cultura-4-hex { color: #231F1E; }
+.Café-Cultura-5-hex { color: #252623; }
+
+/* Color Theme Swatches in RGBA */
+.Café-Cultura-1-rgba { color: rgba(242, 240, 231, 1); }
+.Café-Cultura-2-rgba { color: rgba(209, 200, 187, 1); }
+.Café-Cultura-3-rgba { color: rgba(186, 173, 153, 1); }
+.Café-Cultura-4-rgba { color: rgba(35, 31, 30, 1); }
+.Café-Cultura-5-rgba { color: rgba(37, 38, 35, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Café-Cultura-1-hsla { color: hsla(49, 29, 92, 1); }
+.Café-Cultura-2-hsla { color: hsla(35, 19, 77, 1); }
+.Café-Cultura-3-hsla { color: hsla(36, 19, 66, 1); }
+.Café-Cultura-4-hsla { color: hsla(11, 7, 12, 1); }
+.Café-Cultura-5-hsla { color: hsla(79, 4, 14, 1); }
+
 .App {
+  margin-top: 4em;
   text-align: center;
 }
 
+html {
+  background-color: #BAAD99;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -18,18 +43,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  font-family: 'Mandali', sans-serif;
 }
 
 h1 {
@@ -41,9 +56,24 @@ h1 {
 }
 
 .user-info {
+  font-size: 2em;
   text-align: center;
 }
 
 .search-box {
   margin-top: 2em;
+}
+
+.logo {
+  margin-top: 2em;
+}
+
+.nav-text {
+  text-decoration: none;
+  color: #252623;
+}
+
+.nav-text:hover {
+  text-decoration: underline;
+  color: #252623;
 }
