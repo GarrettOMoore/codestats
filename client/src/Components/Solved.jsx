@@ -25,6 +25,23 @@ class Solved extends Component {
     }
     
     render() {
+        let userInfo;
+        if (this.props.userData.name) {
+            userInfo = (
+                <>
+                    <p className='user-info'>Name: {this.props.userData.name}</p>
+                    <p className='user-info'>Clan: {this.props.userData.clan}</p>
+                    <p className='user-info'>Honor: {this.props.userData.honor}</p>
+                    <p className='user-info'>Leaderboard Position: {this.props.userData.leaderboardPosition}</p>
+                </>
+            )
+        } else {
+            userInfo = (
+                <p className='user-info'>No User found</p>
+            )
+        }
+
+
         let allResults = this.state.data
         let results;
         if (this.state.data) {
@@ -41,16 +58,12 @@ class Solved extends Component {
         })
     } else {
         results = (
-            <p>No Kata found</p>
+            <p className='user-info'>No Kata found</p>
         )
     }
         return(
             <>
-            <p className='user-info'>Name: {this.props.userData.name}</p>
-            <p className='user-info'>Clan: {this.props.userData.clan}</p>
-            <p className='user-info'>Honor: {this.props.userData.honor}</p>
-            {/* <p className='user-info'>Rank: {this.props.userData.ranks}</p> */}
-            <p className='user-info'>Leaderboard Position: {this.props.userData.leaderboardPosition}</p> 
+            {userInfo}
             <h1>My Solved Katas: </h1>
             {results}
             </>
