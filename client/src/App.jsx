@@ -40,7 +40,7 @@ class App extends Component {
   return (
     <Router>
     <div className="App">
-      <img className='logo' src={logo}/>
+      <img className='logo' src={logo} alt="Codewars Logo"/>
       {/* <Link className='nav-text'to='/solved'>Solved</Link> {' | '} */}
       <h1>track your codewars ranking</h1>
       <Link className='nav-text' to='/'>Refresh</Link> <br/>
